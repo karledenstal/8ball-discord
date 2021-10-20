@@ -8,21 +8,20 @@ const configuration = {
 
 const discordBot = discordBotkit(configuration);
 
-discordBot.hears("Brolini?", ["ambient"], (bot, message) => {
-  bot.reply(message, "Pasta Brolini!");
-});
-
 discordBot.on("ready", () => {
   console.log('Ready to rumble!! 🚀');
+
+  discordBot.hears("Brolini?", ["ambient"], (bot, message) => {
+    bot.reply(message, "Pasta Brolini!");
+  });
+
+  discordBot.hears("!8ball", ["direct_message", "ambient"], (bot, message) => {
+    const randomIndex = Math.floor(Math.random() * responses.length);
+  
+    bot.reply(message, "🎱 " + responses[randomIndex]);
+  });
 });
 
 discordBot.on("error", () => {
   console.error("Breaking down!! 🤖");
-});
-
-// The connector supports other types as well
-discordBot.hears("!8ball", ["direct_message", "ambient"], (bot, message) => {
-  const randomIndex = Math.floor(Math.random() * responses.length);
-
-  bot.reply(message, "🎱 " + responses[randomIndex]);
 });
