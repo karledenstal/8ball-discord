@@ -13,8 +13,12 @@ discordBot.hears("Brolini?", ["ambient"], (bot, message) => {
 });
 
 discordBot.on("ready", () => {
-  console.log('Ready to rumble!!! 🚀');
-})
+  console.log('Ready to rumble!! 🚀');
+});
+
+discordBot.on("error", () => {
+  console.error("Breaking down!! 🤖");
+});
 
 // The connector supports other types as well
 discordBot.hears("!8ball", ["direct_message", "ambient"], (bot, message) => {
