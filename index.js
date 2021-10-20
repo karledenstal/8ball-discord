@@ -8,7 +8,7 @@ const configuration = {
 
 const discordBot = discordBotkit(configuration);
 
-discordBot.on("ready", (payload) => {
+discordBot.on("ready", () => {
   console.log('Ready to rumble!! 🚀');
 
   discordBot.hears("Brolini?", ["ambient"], (bot, message) => {
