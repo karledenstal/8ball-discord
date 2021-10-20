@@ -25,6 +25,5 @@ module.exports = [
 
   "It is known",
   "Leave me alone, bruh",
-  "Pasta Brolini",
-  ":nat:"
+  "<:nat:898988916365987871>"
 ];

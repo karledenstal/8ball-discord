@@ -8,17 +8,17 @@ const configuration = {
 
 const discordBot = discordBotkit(configuration);
 
-discordBot.on("ready", () => {
+discordBot.on("ready", (payload) => {
   console.log('Ready to rumble!! 🚀');
 
   discordBot.hears("Brolini?", ["ambient"], (bot, message) => {
-    bot.reply(message, "Pasta Brolini!");
+    if (message.text.includes("?")) bot.reply(message, "Pasta Brolini! 🍝");
   });
 
   discordBot.hears("!8ball", ["direct_message", "ambient"], (bot, message) => {
     const randomIndex = Math.floor(Math.random() * responses.length);
   
-    bot.reply(message, "🎱 " + responses[randomIndex]);
+    bot.reply(message, responses[randomIndex]);
   });
 });
 
