@@ -50,6 +50,10 @@ discordBot.on("ready", () => {
     bot.reply(message, embed);
   });
 
+  discordBot.hears("aspig", "ambient", (bot, message) => {
+    bot.reply(message, "Ser du en dataprogrammerare... eller en kille med asperger?");
+  })
+
   discordBot.hears("Brolini?", ["ambient"], (bot, message) => {
     if (message.text.includes("?")) bot.reply(message, "Pasta Brolini! 🍝");
   });

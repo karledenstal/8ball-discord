@@ -23,6 +23,8 @@ module.exports = [
   "Outlook not so good",
   "Very doubtful",
 
+  "Suss",
+  "You're fucked",
   "It is known",
   "Leave me alone, bruh",
   "<:nat:898988916365987871>", // nat emoji
