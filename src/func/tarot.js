@@ -11,9 +11,9 @@ module.exports = (discordBot) => {
 
     const msg = `🔮\n\n${card.name}\n${
       card.type === "major" ? "Major Arcana" : "Minor Arcana"
-    }\n\n**Value:** ${card.value}\n\n**Meaning up:** ${
+    }\n\n**Value:** ${card.value}\n\n**Meaning upright:** ${
       card.meaning_up
-    }\n\n**Meaning rev:** ${card.meaning_rev}`;
+    }\n\n**Meaning reversed:** ${card.meaning_rev}`;
 
     bot.reply(message, msg);
   });
