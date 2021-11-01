@@ -8,13 +8,20 @@ module.exports = (discordBot) => {
       .then((d) => d.json())
       .then((response) => response.cards);
     const card = get[0];
+    const rev = Math.round(Math.round(Math.random()));
 
-    const msg = `🔮\n\n${card.name}\n${
-      card.type === "major" ? "Major Arcana" : "Minor Arcana"
-    }\n\n**Value:** ${card.value}\n\n**Meaning upright:** ${
-      card.meaning_up
-    }\n\n**Meaning reversed:** ${card.meaning_rev}`;
+    if (rev === 0) {
+      const msg = `🔮\n\n${card.name} (reversed)\n${
+        card.type === "major" ? "Major Arcana" : "Minor Arcana"
+      }\n\n**Value:** ${card.value}\n\n**Meaning:** ${card.meaning_rev}`;
 
-    bot.reply(message, msg);
+      return bot.reply(message, msg);
+    } else {
+      const msg = `🔮\n\n${card.name} (upright)\n${
+        card.type === "major" ? "Major Arcana" : "Minor Arcana"
+      }\n\n**Value:** ${card.value}\n\n**Meaning:** ${card.meaning_up}`;
+  
+      bot.reply(message, msg);
+    }
   });
 };
