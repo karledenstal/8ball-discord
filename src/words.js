@@ -11,6 +11,7 @@ const nouns = [
   "dog",
   "girl",
   "cat",
+  "cunt",
 ];
 
 const verbs = [
