@@ -13,7 +13,7 @@ module.exports = (discordBot) => {
     const rand5 = Math.floor(Math.random() * 10);
     const rand6 = Math.floor(Math.random() * 10);
 
-    const content = `The ${words.adjectives[rand1]} ${words.nouns[rand2]} ${words.adverbs[rand3]} ${words.verbs[rand4]} because some ${words.nouns[rand1]} ${words.adverbs[rand1]} ${words.verbs[rand1]} ${words.preposition[rand1]} a ${words.adjectives[rand2]} ${words.nouns[rand5]} which, became a ${words.adjectives[rand3]} ${words.adjectives[rand4]} ${words.nouns[rand6]}.`;
+    const content = `The ${words.adjectives[rand1]} ${words.nouns[rand2]} ${words.adverbs[rand3]} ${words.verbs[rand4]} because some ${words.nouns[rand1]} ${words.adverbs[rand1]} ${words.verbs[rand1]} ${words.preposition[rand1]} a ${words.adjectives[rand2]} ${words.nouns[rand5]} which, became a ${words.adjectives[rand3]}, ${words.adjectives[rand4]} ${words.nouns[rand6]}.`;
 
     bot.reply(message, content);
   });
