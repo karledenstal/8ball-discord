@@ -6,6 +6,7 @@ const brolini = require('./src/func/brolini');
 const magic8Ball = require('./src/func/magic8ball');
 const tarot = require('./src/func/tarot');
 const discordBotkit = require("botkit-discord");
+const randsent = require("./src/func/randsent");
 
 const configuration = {
   token: process.env.TOKEN,
@@ -22,6 +23,7 @@ discordBot.on("ready", () => {
   pingCall(discordBot);
   magic8Ball(discordBot);
   tarot(discordBot);
+  randsent(discordBot);
 });
 
 discordBot.on("error", (e) => {
