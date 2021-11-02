@@ -9,6 +9,8 @@ const nouns = [
   "professor",
   "hamster",
   "dog",
+  "girl",
+  "cat",
 ];
 
 const verbs = [
