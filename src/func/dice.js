@@ -19,9 +19,9 @@ var dice = {
 };
 
 module.exports = (discordBot) => {
-  discordBot.hears("!dice", ["ambient"], (bot, message) => {
+  discordBot.hears("!roll", ["ambient"], (bot, message) => {
     const embed = new discordBot.RichEmbed();
-    const clean = message.text.replace("!dice", "");
+    const clean = message.text.replace("!roll", "");
     const d = clean.split("d");
     const amount = d[0].trim();
     const die = d[1].trim();

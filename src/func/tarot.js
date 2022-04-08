@@ -5,9 +5,9 @@ const url = process.env.TAROT_URL;
 module.exports = (discordBot) => {
   discordBot.hears("!tarot", ["ambient"], async (bot, message) => {
     const get = await fetch(url)
-      .then((d) => d.json())
-      .then((response) => response.cards);
-    const card = get[0];
+    const { cards } = await get.json();
+
+    const card = cards[0];
     const rev = Math.round(Math.round(Math.random()));
 
     if (rev === 0) {
